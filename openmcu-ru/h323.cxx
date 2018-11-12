@@ -246,7 +246,7 @@ void MCUH323EndPoint::Initialise(PConfig & cfg)
 
   // H.245 Port Setup
   unsigned h245PortBase = MCUConfig("Parameters").GetInteger(H245PortBaseKey, 0);
-  unsigned H245PortMax = MCUConfig("Parameters").GetInteger(H245PortMaxKey, 0);
+  unsigned h245PortMax = MCUConfig("Parameters").GetInteger(H245PortMaxKey, 0);
   if((h245PortBase > 65532) || (h245PortBase==0)) h245PortBase = 20000;
   if(h245PortMax <= h245PortBase) h245PortMax=PMIN(h245PortBase+100, 65532);
   SetTCPPorts(h245PortBase, h245PortMax);
