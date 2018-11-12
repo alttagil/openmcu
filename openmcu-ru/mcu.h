@@ -154,6 +154,7 @@ static const char NATStunServerKey[]      = "STUN server";
 static const char NATStunListKey[]        = "STUN server list";
 static const char DisableFastStartKey[]   = "Disable Fast-Start";
 static const char DisableH245TunnelingKey[]="Disable H.245 Tunneling";
+static const char EnableH46018Key[]       = "Enable H.460 NAT Traversal";
 static const char H245PortBaseKey[]       = "H.245 Base Port";
 static const char H245PortMaxKey[]        = "H.245 Max Port";
 static const char RTPPortBaseKey[]        = "RTP Base Port";

@@ -198,6 +198,7 @@ MCUH323EndPoint::~MCUH323EndPoint()
 void MCUH323EndPoint::Initialise(PConfig & cfg)
 {
   InitialiseCapability();
+  LoadBaseFeatureSet();
 
 #ifdef HAS_AEC
   SetAECEnabled(FALSE);
@@ -263,6 +264,12 @@ void MCUH323EndPoint::Initialise(PConfig & cfg)
   BOOL disableH245Tunneling = cfg.GetBoolean(DisableH245TunnelingKey, FALSE);
   DisableFastStart(disableFastStart);
   DisableH245Tunneling(disableH245Tunneling);
+
+  // Enable/Disable H.460 NAT traversal
+#ifdef H323_H46018
+  BOOL enableH46018 = cfg.GetBoolean(EnableH46018Key, TRUE);
+  H46018Enable(enableH46018);
+#endif
 
   // MCU Server Id
   // SetLocalUserName make localAliasNames.RemoveAll() !!!
