@@ -244,6 +244,13 @@ void MCUH323EndPoint::Initialise(PConfig & cfg)
     nat_lag_ip.Replace(" ","", TRUE, 0);
   }
 
+  // H.245 Port Setup
+  unsigned h245PortBase = MCUConfig("Parameters").GetInteger(H245PortBaseKey, 0);
+  unsigned H245PortMax = MCUConfig("Parameters").GetInteger(H245PortMaxKey, 0);
+  if((h245PortBase > 65532) || (h245PortBase==0)) h245PortBase = 20000;
+  if(h245PortMax <= h245PortBase) h245PortMax=PMIN(h245PortBase+100, 65532);
+  SetTCPPorts(h245PortBase, h245PortMax);
+
   // RTP Port Setup
   unsigned rtpPortBase = MCUConfig("Parameters").GetInteger(RTPPortBaseKey, 0);
   unsigned rtpPortMax = MCUConfig("Parameters").GetInteger(RTPPortMaxKey, 0);
