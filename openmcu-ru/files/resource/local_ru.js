@@ -325,6 +325,7 @@ window.l_gk_mode                                   = "Гейткипер: Тип
 window.l_gk_reg_ttl                                = "Гейткипер: Продолжительность регистрации(TTL)";
 window.l_gk_reg_retry_interval                     = "Гейткипер: Интервал попыток поиска и регистрации";
 window.l_gk_host                                   = "Гейткипер: Хост";
+window.l_gk_h46018                                 = "Enable H.460.18";
 window.l_gk_username                               = "Гейткипер: Имя пользователя";
 window.l_gk_password                               = "Гейткипер: Пароль";
 window.l_gk_room_names                             = "Гейткипер: Алиасы(имена комнат)";

@@ -312,6 +312,7 @@ window.l_gk_mode                                   = "Gatekeeper Mode";
 window.l_gk_reg_ttl                                = "Gatekeeper registration TTL(Time To Live)";
 window.l_gk_reg_retry_interval                     = "Gatekeeper request retry interval";
 window.l_gk_host                                   = "Gatekeeper host";
+window.l_gk_h46018                                 = "Enable H.460.18";
 window.l_gk_username                               = "Gatekeeper username";
 window.l_gk_password                               = "Gatekeeper password";
 window.l_gk_room_names                             = "Gatekeeper room names";
