@@ -1711,7 +1711,7 @@ H323PConfigPage::H323PConfigPage(PHTTPServiceProcess & app,const PString & title
   s << SelectField(GatekeeperRetryIntervalKey, JsLocal("gk_reg_retry_interval"), cfg.GetString(GatekeeperRetryIntervalKey, "30"), "10,20,30,40,50,60,120,180,240,300");
   s << SelectField(GatekeeperTTLKey, JsLocal("gk_reg_ttl"), cfg.GetString(GatekeeperTTLKey), ",60,120,180,240,300,600,1200,1800,2400,3000,3600");
   s << StringField(GatekeeperKey, JsLocal("gk_host"), cfg.GetString(GatekeeperKey));
-  s << BoolField(EnableH46018Key, JsLocal("gk_h460"), cfg.GetBoolean(EnableH46018Key, TRUE));
+  s << BoolField(EnableH46018Key, JsLocal("gk_h46018"), cfg.GetBoolean(EnableH46018Key, TRUE));
   s << StringField(GatekeeperUserNameKey, JsLocal("gk_username"), cfg.GetString(GatekeeperUserNameKey, "MCU"));
   s << PasswordField(GatekeeperPasswordKey, JsLocal("gk_password"), cfg.GetString(GatekeeperPasswordKey));
   s << ArrayField(GatekeeperAliasKey, JsLocal("gk_room_names"), cfg.GetString(GatekeeperAliasKey), 150);
