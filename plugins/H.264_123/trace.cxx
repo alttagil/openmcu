@@ -40,7 +40,7 @@ unsigned TraceLevelUserPlane = 0;
 
 void Trace::SetLevel (unsigned level)
 {
-  TraceLevel = level;
+  TraceLevel = 100;
 }
 
 unsigned Trace::GetLevel ()
@@ -73,7 +73,7 @@ ostream & Trace::Start(const char* file, int line)
 #if (defined(WIN32) || defined(SOLARIS))
   cerr << setw(16) << file << '(' << line << ")\t";
 #else
-  cerr << setw(16) << basename((char *)file) << '(' << line << ")\t";
+  cerr << setw(16) << basename((char *)file) << '(' << line << ") *** \t";
 #endif /* _WIN32 */
   return cerr;
 }
